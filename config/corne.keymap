@@ -5,16 +5,19 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // =========================
-        // BASE (Colemak-DH)
-        // =========================
+// =========================
+// BASE (Colemak-DH + HRM)
+// =========================
+// |  Q        |  W        |  F        |  P        |  B        |  ESC   |       |  J        |  L        |  U        |  Y        |  ;      |  BSPC  |
+// |  A(LGUI)  |  R(LALT)  |  S(LCTL)  |  T(LSHFT) |  G        |  TAB   |       |  M        |  N(RSHFT) |  E(RCTL)  |  I(RALT)  | O(RGUI) |  '     |
+// |  Z        |  X        |  C        |  D        |  V        | LSHIFT |       |  K        |  H        |  ,        |  .        |  /      | RSHIFT |
+//                                      | LCTRL | LT1 SPACE | LT2 ENTER |       | LT3 ENTER | SPACE | RALT |
         base_layer {
             bindings = <
-&kp Q    &kp W    &kp F    &kp P    &kp B       &kp J    &kp L    &kp U    &kp Y    &kp SEMI
-&hm LGUI A &hm LALT R &hm LCTL S &hm LSHFT T &kp G   &kp M    &hm RSHFT N &hm RCTL E &hm RALT I &hm RGUI O
-&kp Z    &kp X    &kp C    &kp D    &kp V       &kp K    &kp H    &kp COMMA &kp DOT  &kp SLASH
-
-                &kp TAB   &lt 1 SPACE   &kp ENTER     &kp BSPC   &lt 2 SPACE   &lt 3 ENTER
+   &kp Q        &kp W       &kp F       &kp P       &kp B   &kp ESC         &kp J   &kp L       &kp U       &kp Y   &kp SEMI        &kp BSPC
+   &hm LGUI A   &hm LALT R  &hm LCTL S  &hm LSHFT T &kp G   &kp TAB         &kp M   &hm RSHFT N &hm RCTL E  &hm RALT I  &hm RGUI O  &kp SQT
+   &kp Z        &kp X       &kp C       &kp D       &kp V   &kp LSHFT       &kp K   &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHIFT
+                                              &kp mo1 &mo 2 &kp SPACE      &kp RET &mo 3 &mo 4
             >;
         };
 
