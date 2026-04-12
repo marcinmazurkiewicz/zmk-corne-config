@@ -37,17 +37,20 @@
                                  >;
                          };
 
-        // =========================
-        // NAVIGATION (layer 2)
-        // =========================
         nav_layer {
-            bindings = <
-&kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp HOME   &kp END  &kp PG_UP &kp PG_DN &kp INS  &kp DEL
-&kp LCTRL &kp LALT &kp LSHIFT &kp TAB &kp ESC   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp BSPC
-&kp C &kp V &kp X &kp Z &kp A   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp ENTER
-
-                &trans &trans &trans     &trans &trans &trans
-            >;
+          // =========================
+          // [2] NAVIGATION (nav_layer)
+          // =========================
+          // |  ESC      | HOME      | UP        | END       | PG_UP     | INS     |       | DEL       | PG_DN     | LEFT      | DOWN      | UP     | RIGHT |
+          // |  TAB      | LEFT      | DOWN      | UP        | RIGHT     | ENTER   |       | LEFT      | DOWN      | UP        | RIGHT     | BSPC   | DEL   |
+          // |  LCTRL    | LALT      | LSHIFT    | C         | V         | X       |       | Z         | A         | S         | D         | F      | ENTER |
+          //                         | TRAN | TRAN | TRAN |       | TRAN | TRAN |
+                                  bindings = <
+          &kp  ESC  &kp HOME &kp UP &kp END &kp PG_UP &kp INS   &kp DEL &kp PG_DN  &kp LEFT &kp DOWN &kp UP &kp RIGHT
+          &kp TAB &kp LEFT   &kp DOWN &kp RIGHT   &trans   &kp RET      &kp LEFT &kp DOWN &kp UP  &kp RIGHT &kp BSPC &kp DEL
+          &kp LCTRL &kp LALT   &kp LSHIFT &kp C   &kp V   &kp X      &kp Z &kp A  &kp S  &kp D &kp F &kp RET
+                                       &trans &trans    &trans    &trans   &trans     &trans
+                                  >;
         };
 
         // =========================
