@@ -17,7 +17,7 @@
    &kp Q        &kp W       &kp F       &kp P       &kp B   &kp ESC         &kp J   &kp L       &kp U       &kp Y   &kp SEMI        &kp BSPC
    &hm LGUI A   &hm LALT R  &hm LCTL S  &hm LSHFT T &kp G   &kp TAB         &kp M   &hm RSHFT N &hm RCTL E  &hm RALT I  &hm RGUI O  &kp SQT
    &kp Z        &kp X       &kp C       &kp D       &kp V   &kp LSHFT       &kp K   &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHIFT
-                                              &kp mo1 &mo 2 &kp SPACE      &kp RET &mo 3 &mo 4
+                                              &mo 1 &mo 2 &kp SPACE      &kp RET &mo 3 &mo 4
             >;
         };
 
