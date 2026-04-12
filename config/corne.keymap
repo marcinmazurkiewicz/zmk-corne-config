@@ -21,68 +21,46 @@
             >;
         };
 
-       symbol_layer {
-    // =========================
-    // [1] SYMBOLS (symbol_layer)
-    // =========================
-    // |  !        |  @        |  #        |  $        |  %        |  ^      |       |  &        |  *        |  (        |  )        |  -     |  =    |
-    // |  ~        |  |        |  {        |  }        |  [        |  ]      |       |  _        |  +        |  <        |  >        |  :     |  ;    |
-    // |  `        |  \        |  /        |  ?        |  .        |  ,      |       |  ,        |  .        |  /        |  ?        |  |     |  `    |
-    //                         | TRAN | TRAN | TRAN |       | TRAN | TRAN |
+        symbol_layer {
+         // =========================
+         // [1] SYMBOLS (symbol_layer)
+         // =========================
+         // |  !        |  @        |  #        |  $        |  %        |  ^      |       |  &        |  *        |  (        |  )        |  -     |  =    |
+         // |  ~        |  |        |  {        |  }        |  [        |  ]      |       |  _        |  +        |  <        |  >        |  :     |  ;    |
+         // |  `        |  \        |  /        |  ?        |  .        |  ,      |       |  ,        |  .        |  /        |  ?        |  |     |  `    |
+         //                         | TRAN | TRAN | TRAN |       | TRAN | TRAN |
+                 bindings = <
+         &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp MINUS &kp EQUAL
+         &kp TILDE   &kp PIPE &kp LBRC  &kp RBRC &kp G   &kp LBKT  &kp LBKT   &kp UNDER &kp PLUS &kp LT  &kp GT &kp COLON &kp SEMI
+         &kp GRAVE   &kp BSLH       &kp FSLH       &kp QMARK       &kp DOT   &kp COMMA       &kp COMMA   &kp DOT     &kp FSLH   &kp QMARK     &kp PIPE    &kp GRAVE
+                                                       &trans &trans &trans      &trans &trans &trans
+                                 >;
+                         };
+
+        // =========================
+        // NAVIGATION (layer 2)
+        // =========================
+        nav_layer {
             bindings = <
-       &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp MINUS &kp EQUAL
-       &kp TILDE   &kp PIPE &kp LBRC  &kp RBRC &kp G   &kp LBKT  &kp LBKT   &kp UNDER &kp PLUS &kp LT  &kp GT &kp COLON &kp SEMI
-       &kp GRAVE   &kp BSLH       &kp FSLH       &kp QMARK       &kp DOT   &kp COMMA       &kp COMMA   &kp DOT     &kp FSLH   &kp QMARK     &kp PIPE    &kp GRAVE
-                                                  &trans &trans &trans      &trans &trans &trans
-                            >;
-                    };
+&kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp HOME   &kp END  &kp PG_UP &kp PG_DN &kp INS  &kp DEL
+&kp LCTRL &kp LALT &kp LSHIFT &kp TAB &kp ESC   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp BSPC
+&kp C &kp V &kp X &kp Z &kp A   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp ENTER
 
-                    nav_layer {
-    // =========================
-    // [2] NAVIGATION (nav_layer)
-    // =========================
-    // |  ESC      | HOME      | UP        | END       | PG_UP     | INS     |       | DEL       | PG_DN     | LEFT      | DOWN      | UP     | RIGHT |
-    // |  TAB      | LEFT      | DOWN      | UP        | RIGHT     | ENTER   |       | LEFT      | DOWN      | UP        | RIGHT     | BSPC   | DEL   |
-    // |  LCTRL    | LALT      | LSHIFT    | C         | V         | X       |       | Z         | A         | S         | D         | F      | ENTER |
-    //                         | TRAN | TRAN | TRAN |       | TRAN | TRAN |
-                            bindings = <
-       &kp  ESC  &kp HOME &kp UP &kp END &kp PG_UP &kp INS   &kp DEL &kp PG_DN  &kp LEFT &kp DOWN &kp UP &kp RIGHT
-       &kp TAB &kp LEFT   &kp DOWN &kp RIGHT   &trans   &kp RET      &kp LEFT &kp DOWN &kp UP  &kp RIGHT &kp BSPC &kp DEL
-       &kp LCTRL &kp LALT   &kp LSHIFT &kp C   &kp V   &kp X      &kp Z &kp A  &kp S  &kp D &kp F &kp RET
-                                 &trans &trans    &trans    &trans   &trans     &trans
-                            >;
-                    };
+                &trans &trans &trans     &trans &trans &trans
+            >;
+        };
 
-                     pl_layer {
-    // =========================
-    // [3] POLISH (pl_layer)
-    // =========================
-    // |  Ą        |  Ć        |  Ę        |  Ł        |  Ń        | TRANS   |       |  Ś        |  Ź        |  Ż        |  Ó        | TRANS  | TRANS |
-    // |  TRANS    | TRANS     | TRANS     | TRANS     | TRANS     | TRANS   |       | TRANS     | TRANS     | TRANS     | TRANS     | TRANS  | TRANS |
-    // |  TRANS    | TRANS     | TRANS     | TRANS     | TRANS     | TRANS   |       | TRANS     | TRANS     | TRANS     | TRANS     | TRANS  | TRANS |
-    //                         | TRAN | TRAN | TRAN |       | TRAN | TRAN |
-                                            bindings = <
-        &kp RA(A) &kp RA(C) &kp RA(E) &kp RA(L) &kp RA(N) &trans     &kp RA(S) &kp RA(Z) &kp RA(X) &kp RA(O) &trans &trans
-        &trans &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
-                          &trans &trans    &trans    &trans   &trans     &trans
-                                            >;
-                                    };
+        // =========================
+        // POLISH (layer 3 - AltGr based)
+        // =========================
+        pl_layer {
+            bindings = <
+&kp RA(A) &kp RA(C) &kp RA(E) &kp RA(L) &kp RA(N)   &kp RA(S) &kp RA(Z) &kp RA(X) &kp RA(O) &trans
+&trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
 
-               config_layer {
-    // =========================
-    // [4] CONFIG (pl_layer)
-    // =========================
-    // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-    // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-    // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-    //                    | GUI |     | SPC |   | ENT |     | ALT |
-                                      bindings = <
-                 &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-                 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-                 &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                                  &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                                      >;
+                &trans &trans &trans     &trans &trans &trans
+            >;
         };
     };
 
