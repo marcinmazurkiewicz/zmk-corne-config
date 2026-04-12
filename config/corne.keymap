@@ -53,16 +53,20 @@
                                   >;
         };
 
-        // =========================
-        // POLISH (layer 3 - AltGr based)
-        // =========================
         pl_layer {
             bindings = <
-&kp RA(A) &kp RA(C) &kp RA(E) &kp RA(L) &kp RA(N)   &kp RA(S) &kp RA(Z) &kp RA(X) &kp RA(O) &trans
-&trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
-
-                &trans &trans &trans     &trans &trans &trans
+// =========================
+// [3] POLISH (pl_layer)
+// =========================
+// |  Ą        |  Ć        |  Ę        |  Ł        |  Ń        | TRANS   |       |  Ś        |  Ź        |  Ż        |  Ó        | TRANS  | TRANS |
+// |  TRANS    | TRANS     | TRANS     | TRANS     | TRANS     | TRANS   |       | TRANS     | TRANS     | TRANS     | TRANS     | TRANS  | TRANS |
+// |  TRANS    | TRANS     | TRANS     | TRANS     | TRANS     | TRANS   |       | TRANS     | TRANS     | TRANS     | TRANS     | TRANS  | TRANS |
+//                         | TRAN | TRAN | TRAN |       | TRAN | TRAN |
+                                        bindings = <
+    &kp RA(A) &kp RA(C) &kp RA(E) &kp RA(L) &kp RA(N) &trans     &kp RA(S) &kp RA(Z) &kp RA(X) &kp RA(O) &trans &trans
+    &trans &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
+                      &trans &trans    &trans    &trans   &trans     &trans
             >;
         };
     };
