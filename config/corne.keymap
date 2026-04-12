@@ -53,4 +53,17 @@
                         >;
                 };
         };
+   // =========================
+   // HOME ROW MODS (STABLE)
+   // =========================
+   behaviors {
+        hm: homerow_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+   };
 };
