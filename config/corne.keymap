@@ -95,9 +95,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HM";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
-            flavor = "balanced";
+            tapping-term-ms = <450>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
